@@ -1,4 +1,4 @@
-/* Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -24,14 +24,6 @@ section h2 {
   padding: 3rem 4rem;
 }
 
-/* TEMPORARY - Remove after adding all the styles */
-/* img {
-  display: block;
-  width: 100px;
-  height: 100px;
-} */
-
-/* 1. Flex - Header Navigation */
 
 .header{
   background-color: #1d1d1d;
@@ -66,7 +58,7 @@ section h2 {
   color: #9c9c9c;
   cursor: pointer;
 }
-/* 2. Flex and Column - Featured Section */
+
 .featured{
   display: flex;
   justify-content: space-between;
@@ -121,7 +113,7 @@ section h2 {
 .featured-content p{
   color: #4d4d4d;
 }
-/* 3. Flex/Grid List - Latest Cards */
+
 .latest-list{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -160,7 +152,7 @@ section h2 {
   padding-right: 1.5rem;
   font-weight: bold;
 }
-/* 4. Flex/Grid 2D - Hot News */
+
 .hot{
   background: #1d1d1d;
   color: #fff;
@@ -174,9 +166,7 @@ section h2 {
   color: #666;
   margin-bottom: 2rem;
 }
-/* 4a. Flex/Grid 2D - Hot News - Flex Version */
 
-/* 4b. Flex/Grid 2D - Hot News - Grid Version */
 
 
 
@@ -222,7 +212,7 @@ section h2 {
   grid-row: span 1;
 }
 
-/* 5. Grid - Masonry Layout */
+
 .masonry{
   padding: 4rem 1rem;
   background: #fff;
@@ -288,7 +278,7 @@ grid-row: span 2;
   grid-column: span 1;
   grid-row: span 1;
 }
-/* 6. Grid Templates - News Gallery */
+
 .gallery{
   padding: 4rem 1rem;
   background: #fff;
@@ -382,7 +372,7 @@ grid-row: span 2;
 .n{
  grid-area: n;
 }
-/* 7. Images and Styling */
+
 
 footer{
   background: black;
@@ -479,3 +469,4 @@ footer p{
   .container{
     padding: 2rem 1rem;
   }
+}
