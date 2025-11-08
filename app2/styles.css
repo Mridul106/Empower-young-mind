@@ -25,18 +25,141 @@ section h2 {
 }
 
 /* TEMPORARY - Remove after adding all the styles */
-img {
+/* img {
   display: block;
   width: 100px;
   height: 100px;
-}
+} */
 
 /* 1. Flex - Header Navigation */
 
+.header{
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 1.5rem 4rem;
+}
+
+.header-logo{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.header-links{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.header-links a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-links a:hover{
+  color: #9c9c9c;
+  cursor: pointer;
+}
 /* 2. Flex and Column - Featured Section */
+.featured{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 600px;
+}
 
+.featured-image{
+  flex-basis: 50%;
+  height: 100%;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+}
+
+.featured-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-content{
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.featured-more{
+  color: #fff;
+  background-color: #1d1d1d;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.featured-more:hover{
+  background-color: #414141;
+  color: #d9d8d8;
+  cursor: pointer;
+}
+
+.featured-footer{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.featured-content p{
+  color: #4d4d4d;
+}
 /* 3. Flex/Grid List - Latest Cards */
+.latest-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+}
+.latest-card{
+  height: 500px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: none;
+}
 
+.latest-card img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.latest-content{
+  padding: 1.5rem;
+}
+
+.latest-content h3{
+  margin-bottom: 1.5rem;
+}
+
+.latest-content p{
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.latest-more{
+  text-decoration: none;
+  padding-right: 1.5rem;
+  font-weight: bold;
+}
 /* 4. Flex/Grid 2D - Hot News */
 
 /* 4a. Flex/Grid 2D - Hot News - Flex Version */
