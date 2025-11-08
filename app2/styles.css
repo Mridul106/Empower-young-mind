@@ -305,6 +305,12 @@ grid-row: span 2;
   grid-template-rows: repeat(5, 200px);
   gap: 1rem;
   margin: 0 auto;
+  grid-template-areas: 
+  "a b b c d"
+  "e e f c g"
+  "e e h h m"
+  "i k h h m"
+  "j k l n m";
 }
 
 .gallery-grid img{
@@ -320,72 +326,156 @@ grid-row: span 2;
 }
 
 .a{
-  grid-column: span 1;
-  grid-row: span 1;
+ grid-area: a;
 }
 
 .b{
-  grid-column: span 2;
-  grid-row: span 1;
+  grid-area: b;
 }
 
 .c{
-  grid-column: span 1;
-  grid-row: span 2;
+ grid-area: c;
 }
 
 .d{
-  grid-column: span 1;
-  grid-row: span 1;
+  grid-area: d;
 }
 
 .e{
-  grid-column: span 2;
-  grid-row: span 2;
+ grid-area: e;
 }
 
 .f{
-  grid-column: span 1;
-  grid-row: span 1;
+ grid-area: f;
 }
 
 .g{
-  grid-column: span 1;
-  grid-row: span 1;
+ grid-area: g;
 }
 
 .h{
-  grid-column: span 2;
-  grid-row: span 2;
+  grid-area: h;
 }
 
 .i{
-  grid-column: span 1;
-  grid-row: span 2;
+ grid-area: i;
 }
 
 .j{
-  grid-column: span 1;
-  grid-row: span 1;
+  grid-area: j;
 }
 
 .k{
-  grid-column: span 1;
-  grid-row: span 2;
+  grid-area: k;
 }
 
 .l{
-  grid-column: span 1;
-  grid-row: span 1;
+  grid-area: l;
+  
 }
 
+
 .m{
-  grid-column: span 1;
-  grid-row: span 1;
+  grid-area: m;
 }
 
 .n{
-  grid-column: span 2;
-  grid-row: span 1;
+ grid-area: n;
 }
 /* 7. Images and Styling */
+
+footer{
+  background: black;
+  color: white;
+}
+
+footer p{
+  padding: 2rem 4rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.hot-card{
+  position: relative;
+}
+
+.hot-overlay{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  background: rgb(0,0,0,0.7);
+  font-weight: bold;
+}
+
+.masonry-item{
+  position: relative;
+}
+
+.masonry-item::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.3s easy;
+}
+
+.masonry-item::after{
+  content: "View Story";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.masonry-item:hover::before,
+.masonry-item:hover::after{
+  opacity: 1;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .header-links{
+    display:none;
+  }
+
+  .featured{
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  .masonry-grid{
+    display: block;
+  }
+
+  .masonry-item{
+    margin-bottom: 1rem;
+    height: 300px;
+  }
+
+  .gallery-grid{
+    display: block;
+  }
+
+  .gallery-item{
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  .container{
+    padding: 2rem 1rem;
+  }
